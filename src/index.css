@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-gold: #f8c105;
+  --color-brand-yellow: #fc0;
+  --color-brand-green: #25D366;
+  --font-display: 'Poppins', sans-serif;
+  --font-sans: 'Poppins', sans-serif;
+}
+
+html, body, #root, *, button, input, select, textarea {
+  font-family: 'Poppins', sans-serif !important;
+}
+
+.glow-yellow {
+  text-shadow: 0 0 10px rgba(248, 193, 5, 0.4);
+}
+
+.glow-card:hover {
+  border-color: rgba(248, 193, 5, 0.4);
+  box-shadow: 0 0 15px rgba(248, 193, 5, 0.12);
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #09090b;
+}
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}

@@ -1,0 +1,6 @@
+{
+  "name": "LUPUMBA BARBEARIA",
+  "description": "Lupumba Barbearia - Seu corte. Seu horário. Do seu jeito. Agendamento prático, cortes masculinos premium, degradê, barba e sobrancelha com Luan Barbeiro em Cordeiros, Itajaí.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
