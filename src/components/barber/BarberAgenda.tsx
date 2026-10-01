@@ -271,7 +271,10 @@ export default function BarberAgenda() {
                     : 'bg-[#0f141d] hover:bg-[#151c28] text-zinc-300 border-[#1c2637]'
                 }`}
               >
-                <User size={13} />
+                <span
+                  className="w-2.5 h-2.5 rounded-full shrink-0 shadow-sm"
+                  style={{ backgroundColor: prof.color || '#f8c105' }}
+                />
                 <span>{prof.name}</span>
                 <span className="text-[10px] opacity-75 font-normal">({prof.role})</span>
               </button>

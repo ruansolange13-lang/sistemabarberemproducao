@@ -31,7 +31,7 @@ const initialTenants: BarbeariaTenant[] = [
     miniCentralAtiva: true,
     agendaAtiva: true,
     plan: 'Plano Pro',
-    planPrice: 149.9,
+    planPrice: 197.9,
     planStatus: 'ativo',
     subscriptionStatus: 'ativa',
     subscriptionId: 'sub_lupumba_2026',
@@ -49,17 +49,40 @@ const initialTenants: BarbeariaTenant[] = [
         id: 'prof-1',
         name: 'Luan Barbeiro',
         role: 'Master Barber / Sócio',
+        specialty: 'Cortes modernos & Barba terapia',
         phone: '(47) 99623-9122',
+        email: 'luan@snakebarber.app',
+        accessCategory: 'Administrador',
+        color: '#f59e0b',
         commissionPercent: 60,
         isActive: true,
+        acceptsBooking: true,
       },
       {
         id: 'prof-2',
         name: 'Pumba Pimentel',
         role: 'Barbeiro Especialista',
+        specialty: 'Degradê navalhado e freestyle',
         phone: '(47) 99623-9122',
+        email: 'pumba@snakebarber.app',
+        accessCategory: 'Barbeiro',
+        color: '#3b82f6',
         commissionPercent: 55,
         isActive: true,
+        acceptsBooking: true,
+      },
+      {
+        id: 'prof-3',
+        name: 'Ruan santos',
+        role: 'Barbeiro',
+        specialty: 'Cortes clássicos',
+        phone: '(47) 99123-4567',
+        email: 'ruan@snakebarber.app',
+        accessCategory: 'Barbeiro',
+        color: '#e68a00',
+        commissionPercent: 40,
+        isActive: true,
+        acceptsBooking: true,
       },
     ],
   },
@@ -536,6 +559,7 @@ interface SaaSContextType {
 
   financeEntries: FinanceEntry[];
   addFinanceEntry: (entry: Omit<FinanceEntry, 'id'>) => void;
+  deleteFinanceEntry: (id: string) => void;
 
   auditLogs: AuditLogItem[];
   addAuditLog: (action: string, details: string, tenantId?: string, tenantName?: string) => void;
@@ -807,9 +831,9 @@ export function SaaSProvider({ children }: { children: React.ReactNode }) {
     }
 
     const planPrices: Record<string, number> = {
-      'Plano Start': 89.9,
-      'Plano Pro': 149.9,
-      'Plano Enterprise': 249.9,
+      'Plano Start': 197.9,
+      'Plano Pro': 197.9,
+      'Plano Enterprise': 197.9,
     };
 
     const newId = `tenant_${cleanSlug}_${Date.now()}`;
@@ -1276,6 +1300,11 @@ export function SaaSProvider({ children }: { children: React.ReactNode }) {
     showNotification('Lançamento financeiro registrado com sucesso!', 'success');
   };
 
+  const deleteFinanceEntry = (id: string) => {
+    setFinanceEntries((prev) => prev.filter((item) => item.id !== id));
+    showNotification('Lançamento removido do financeiro.', 'info');
+  };
+
   return (
     <SaaSContext.Provider
       value={{
@@ -1313,6 +1342,7 @@ export function SaaSProvider({ children }: { children: React.ReactNode }) {
         redeemFreeCut,
         financeEntries,
         addFinanceEntry,
+        deleteFinanceEntry,
         auditLogs,
         addAuditLog,
         notification,

@@ -412,7 +412,7 @@ export default function SuperAdminDashboard() {
               </span>
               <h4 className="font-display font-black text-lg text-white">Plano Pro</h4>
               <span className="font-mono font-black text-2xl text-[#f8c105] block">
-                R$ 149,90 <span className="text-xs text-zinc-400 font-sans">/ mês</span>
+                R$ 197,90 <span className="text-xs text-zinc-400 font-sans">/ mês</span>
               </span>
               <p className="text-zinc-300 leading-relaxed">
                 Mini Central completa, vitrine de cortes personalizada, equipe ilimitada, Marketing IA e notificações WhatsApp.

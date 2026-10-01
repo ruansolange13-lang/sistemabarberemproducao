@@ -450,7 +450,10 @@ ${isPaid ? 'Meu horário já está garantido na agenda!' : 'Gostaria de confirma
                         Escolha o Barbeiro / Profissional:
                       </label>
                       <div className="grid grid-cols-2 gap-2">
-                        {currentTenant.professionals.map((prof) => (
+                        {(currentTenant.professionals.filter((p) => p.isActive !== false && p.acceptsBooking !== false).length > 0
+                          ? currentTenant.professionals.filter((p) => p.isActive !== false && p.acceptsBooking !== false)
+                          : currentTenant.professionals
+                        ).map((prof) => (
                           <button
                             key={prof.id}
                             type="button"

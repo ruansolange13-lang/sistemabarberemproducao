@@ -30,12 +30,6 @@ export default function BannerLogo() {
             transition={{ delay: 0.15, duration: 0.5, ease: 'easeOut' }}
             className="relative z-10 flex flex-col items-center text-center"
           >
-            {/* Real Logo Emblem */}
-            <span className="text-[9px] font-mono tracking-[0.25em] text-[#f8c105]/90 uppercase mb-1.5 font-bold flex items-center gap-1.5">
-              <span className="w-1 h-1 rounded-full bg-[#f8c105]" />
-              SNAKE BARBER
-            </span>
-
             <div className="relative w-20 h-20 sm:w-24 sm:h-24 mb-2 flex items-center justify-center">
               {/* Golden Outer Shield Halo */}
               <div className="absolute -inset-1 rounded-full border border-[#f8c105]/40 bg-gradient-to-b from-[#f8c105]/20 via-black/80 to-black shadow-[0_0_28px_rgba(248,193,5,0.35)] pointer-events-none" />

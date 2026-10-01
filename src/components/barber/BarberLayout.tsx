@@ -59,7 +59,6 @@ export default function BarberLayout() {
     { id: 'financeiro', label: 'Financeiro', icon: DollarSign },
 
     { id: 'minicentral-editor', label: 'Editar Mini Central', icon: Sliders, section: 'Presença Digital' },
-    { id: 'marketing-ia', label: 'Marketing IA', icon: Sparkles },
     { id: 'fidelizacao', label: 'Fidelização', icon: Award },
     { id: 'consultor-ia', label: 'Consultor IA', icon: Lightbulb },
     { id: 'plano', label: 'Meu Plano SaaS', icon: CreditCard, section: 'Minha Assinatura' },

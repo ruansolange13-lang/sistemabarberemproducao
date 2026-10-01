@@ -57,10 +57,15 @@ export interface ProfessionalItem {
   id: string;
   name: string;
   role: string;
+  specialty?: string;
   phone: string;
+  email?: string;
+  accessCategory?: 'Barbeiro' | 'Administrador' | 'Recepcionista';
+  color?: string;
   avatarUrl?: string;
   commissionPercent: number;
   isActive: boolean;
+  acceptsBooking?: boolean;
 }
 
 export type AppointmentPaymentStatus = 'PENDENTE' | 'PAGO' | 'CANCELADO';
